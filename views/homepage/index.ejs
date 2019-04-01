@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thi trắc nghiệm</title>
 
-<%-include('../../layouts/head.ejs')%>
+    <!--Start Css-->
+    <%include partials/css%>
+    <link rel="stylesheet" href="/custom/homepage/css/homepage.css">
+
+    <!--Start Script-->
+    <%include partials/scripts%>
+    <!--End Script-->
+
+</head>
 
 <body>
     <div id="wrapper">
         <!--Start Header-->
-        <header class="animated fadeInDown">
-            <a class="logo" href="">Logo</a>
-            <div class="menu-toggle">
-            </div>
-            <nav>
-                <ul>
-                    <li><a class="active" href="/">Trang Chủ</a></li>
-                    <li><a href="/users/exam">Khoá Thi</a></li>
-                    <li><a href="/users/information">Thông tin</a></li>
-                    <li><a href="/users/login">Đăng nhập</a></li>
-                    <li><a href="/users/register">Đăng Kí</a></li>
-                </ul>
-            </nav>
-            <div class="clearfix">
-            </div>
-        </header>
+        <%-include models/_navbar%>
         <!--End Header-->
     </div>
     <div class="menu-wrapper">
@@ -641,47 +639,7 @@
             </div>
         </div>
     </section>
-    <footer id="myFooter">
-        <div class="container" id="myFooterInfo">
-            <div class="row">
-                <div class="col-sm-4 myCols">
-                    <h5>Get started</h5>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sign up</a></li>
-                        <li><a href="#">Downloads</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4 myCols">
-                    <h5>About us</h5>
-                    <ul>
-                        <li><a href="#">Company Information</a></li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4 myCols">
-                    <h5>Support</h5>
-                    <ul>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Help desk</a></li>
-                        <li><a href="#">Forums</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="social-networks">
-
-            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="google"><i class="fab fa-google-plus"></i></a>
-        </div>
-        <div class="footer-copyright">
-            <p>© 2019 Copyright PhiDuy </p>
-        </div>
-
-    </footer>
-
+  <%include models/_footer%>
 
     <script type="text/javascript">
         $(document).ready(function () {

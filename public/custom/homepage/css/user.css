@@ -120,10 +120,16 @@ nav ul li a:hover {
     input[type=text] {
         width: auto !important;
     }
+    input[type=password] {
+      width: auto !important;
+    }
 }
 @media only screen and (max-width: 320px) {
     input[type=text] {
         padding: 10px !important;
+    }
+    input[type=password] {
+      padding: 10px !important;
     }
 }
 /* STRUCTURE */
@@ -211,7 +217,7 @@ nav ul li a:hover {
     transform: scale(0.95);
   }
   
-  input[type=text] {
+  input[type=text], input[type=password] {
     background-color: #f6f6f6;
     border: none;
     color: #0d0d0d;
@@ -240,7 +246,13 @@ nav ul li a:hover {
   input[type=text]:placeholder {
     color: #cccccc;
   }
-  
+  input[type=password]:focus {
+    background-color: #fff;
+    border-bottom: 2px solid #5fbae9;
+  } 
+  input[type=password]:placeholder {
+    color: #cccccc;
+  }
   
   
   /* ANIMATIONS */

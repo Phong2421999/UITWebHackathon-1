@@ -1,53 +1,56 @@
-<%-include('../../../layouts/head.ejs')%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thi trắc nghiệm</title>
+
+    <!--Start Css-->
+    <%include ../partials/css%>
+    <!--Style for user-->
+    <link rel="stylesheet" href="/custom/homepage/css/user.css">
+    <!--End Css-->
+
+    <!--Start Script-->
+    <%include ../partials/scripts%>
+    <!--End Script-->
+
+</head>
 <body>
     <div class="base">
         <!--Start Header-->
-        <header class="animated fadeInDown">
-            <a class="logo" href="">Logo</a>
-            <div class="menu-toggle">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../homepage.html">Trang Chủ</a></li>
-                    <li><a href="./exam.html">Khoá Thi</a></li>
-                    <li><a href="#">Thông tin</a></li>
-                    <li><a class="active" href="../users/login.html">Đăng nhập</a></li>
-                    <li><a href="../users/register.html">Đăng Kí</a></li>
-                </ul>
-            </nav>
-            <div class="clearfix">
-            </div>
-        </header>
+        <%include ../models/_navbar%>
         <!--End Header-->
         <!--Start Login Form-->
         <section class="bg-test" style="padding-top: 30vh;">
             <div class="wrapper fadeInDown">
                 <div id="formContent">
                   <!-- Tabs Titles -->
-              
+
                   <!-- Icon -->
                     <div class="fadeIn first">
                     </div>
-              
+
                   <!-- Login Form -->
-                    <form>
-                        <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-                        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+                    <form action="/users/login" method="POST">
+                        <input type="text" id="login" class="fadeIn second" name="loginUsername" placeholder="login">
+                        <input type="text" id="password" class="fadeIn third" name="loginPassword" placeholder="password">
                         <input type="submit" class="fadeIn fourth" value="Log In">
                     </form>
-   
-              
+
+
                   <!-- Remind Passowrd -->
                     <div id="formFooter">
                         <p>© 2019 Copyright PhiDuy </p>
                     </div>
-              
+
                 </div>
               </div>
         </section>
         <!--End Login Form-->
     </div>
-   
+
 </body>
 
 <script type="text/javascript">
@@ -58,3 +61,4 @@
         })
     });
 </script>
+</html>

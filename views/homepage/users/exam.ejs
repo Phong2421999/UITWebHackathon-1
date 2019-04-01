@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="vi">
-<%-include('../../../layouts/head.ejs')%>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thi trắc nghiệm</title>
+
+    <!--Start Css-->
+    <%include ../partials/css%>
+    <link rel="stylesheet" href="/custom/homepage/css/header.css">
+    <link rel="stylesheet" href="/custom/homepage/css/exam.css">
+    <!--End Css-->
+
+    <!--Start Script-->
+    <%include ../partials/scripts%>
+    <!--End Script-->
+
+</head>
 <body>
     <div class="wrapper">
         <!--Start Header-->
-        <header class="animated fadeInDown">
-            <a class="logo" href="">Logo</a>
-            <div class="menu-toggle">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../homepage.html">Trang Chủ</a></li>
-                    <li><a class="active" href="#">Khoá Thi</a></li>
-                    <li><a href="#">Thông tin</a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#logoutModal">Đăng xuất</a></li>
-                </ul>
-            </nav>
-            <div class="clearfix">
-            </div>
-        </header>
+        <%-include models/_navbar%>
         <!--End Header-->
         <section>
             <div class="container">
@@ -250,6 +252,8 @@
             })
         });
     </script>
-    
+
 
 </body>
+
+</html>
