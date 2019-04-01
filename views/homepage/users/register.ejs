@@ -1,35 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<%-include('../../../layouts/homepage/users/head.ejs')%>
-<div class="base">
-<!--Start Header-->
-<%-include('../../../layouts/header.ejs')%>
-<!--End Header-->
-<!--Start Login Form-->
-<section class="bg-test" style="padding-top: 30vh;">
-    <div class="wrapper fadeInDown">
-        <div id="formContent">
-          <!-- Tabs Titles -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thi trắc nghiệm</title>
 
-          <!-- Icon -->
-          <div class="fadeIn first">
+    <!--Start Css-->
+    <%include ../partials/css%>
+    <!--Style for user-->
+    <link rel="stylesheet" href="/custom/homepage/css/user.css">
+    <!--End Css-->
+
+    <!--Start Script-->
+    <%include ../partials/scripts%>
+    <!--End Script-->
+
+</head>
+<body>
+  <div class="base">
+    <!--Start Header-->
+    <%include ../models/_navbar%>
+    <!--End Header-->
+    <!--Start Login Form-->
+    <section class="bg-test" style="padding-top: 30vh;">
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+              <!-- Tabs Titles -->
+
+              <!-- Icon -->
+              <div class="fadeIn first">
+              </div>
+
+              <!-- Login Form -->
+              <form>
+                <input type="text" id="fullname" class="fadeIn third" name="fullname" placeholder="fullname">
+                <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
+                <input type="password" id="password" class="fadeIn fourth" name="login" placeholder="password">
+                <input type="submit" class="fadeIn fourth" value="Register">
+              </form>
+
+              <!-- Remind Passowrd -->
+              <div id="formFooter">
+                <p>© 2019 Copyright PhiDuy </p>
+              </div>
+            </div>
           </div>
-
-          <!-- Login Form -->
-          <form>
-            <input type="text" id="fullname" class="fadeIn third" name="fullname" placeholder="fullname">
-            <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
-            <input type="text" id="password" class="fadeIn fourth" name="login" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Register">
-          </form>
-
-          <!-- Remind Passowrd -->
-          <div id="formFooter">
-            <p>© 2019 Copyright PhiDuy </p>
-          </div>
-        </div>
-      </div>
-</section>
-<!--End Login Form-->
-</div>
+    </section>
+    <!--End Login Form-->
+    </div>
+</body>
 </html>

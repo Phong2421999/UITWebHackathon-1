@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thi trắc nghiệm</title>
 
-<%-include('../../layouts/homepage/head.ejs')%>
+    <!--Start Css-->
+    <%include partials/css%>
+    <link rel="stylesheet" href="/custom/homepage/css/homepage.css">
+
+    <!--Start Script-->
+    <%include partials/scripts%>
+    <!--End Script-->
+
+</head>
 
 <body>
     <div id="wrapper">
         <!--Start Header-->
-        <%-include('../../layouts/header.ejs')%>
+        <%-include models/_navbar%>
         <!--End Header-->
     </div>
     <div class="menu-wrapper">
@@ -626,7 +639,7 @@
             </div>
         </div>
     </section>
-  <%-include('../../layouts/footer.ejs')%>
+  <%include models/_footer%>
 
     <script type="text/javascript">
         $(document).ready(function () {
