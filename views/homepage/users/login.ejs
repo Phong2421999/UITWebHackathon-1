@@ -1,0 +1,60 @@
+<%-include('../../../layouts/head.ejs')%>
+<body>
+    <div class="base">
+        <!--Start Header-->
+        <header class="animated fadeInDown">
+            <a class="logo" href="">Logo</a>
+            <div class="menu-toggle">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../homepage.html">Trang Chủ</a></li>
+                    <li><a href="./exam.html">Khoá Thi</a></li>
+                    <li><a href="#">Thông tin</a></li>
+                    <li><a class="active" href="../users/login.html">Đăng nhập</a></li>
+                    <li><a href="../users/register.html">Đăng Kí</a></li>
+                </ul>
+            </nav>
+            <div class="clearfix">
+            </div>
+        </header>
+        <!--End Header-->
+        <!--Start Login Form-->
+        <section class="bg-test" style="padding-top: 30vh;">
+            <div class="wrapper fadeInDown">
+                <div id="formContent">
+                  <!-- Tabs Titles -->
+              
+                  <!-- Icon -->
+                    <div class="fadeIn first">
+                    </div>
+              
+                  <!-- Login Form -->
+                    <form>
+                        <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
+                        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+                        <input type="submit" class="fadeIn fourth" value="Log In">
+                    </form>
+   
+              
+                  <!-- Remind Passowrd -->
+                    <div id="formFooter">
+                        <p>© 2019 Copyright PhiDuy </p>
+                    </div>
+              
+                </div>
+              </div>
+        </section>
+        <!--End Login Form-->
+    </div>
+   
+</body>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.menu-toggle').click(function () {
+            $('.menu-toggle').toggleClass('active');
+            $('nav').toggleClass('active');
+        })
+    });
+</script>

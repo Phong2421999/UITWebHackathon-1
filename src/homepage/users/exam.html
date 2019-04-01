@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thi trắc nghiệm</title>
+
+    <!--Start Css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="stylesheet" href="../../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../public/custom/homepage/css/header.css">
+    <link rel="stylesheet" href="../../../public/custom/homepage/css/exam.css">
+    <!--End Css-->
+
+    <!--Start Script-->
+    <script src="../../../public/js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--End Script-->
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--Start Header-->
+        <header class="animated fadeInDown">
+            <a class="logo" href="">Logo</a>
+            <div class="menu-toggle">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../homepage.html">Trang Chủ</a></li>
+                    <li><a class="active" href="#">Khoá Thi</a></li>
+                    <li><a href="#">Thông tin</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#logoutModal">Đăng xuất</a></li>
+                </ul>
+            </nav>
+            <div class="clearfix">
+            </div>
+        </header>
+        <!--End Header-->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                        <div class="form-group">
+                            <label for="exampleSelect1">Chọn môn</label>
+                            <select class="form-control" id="exampleSelect1">
+                                <option>Môn 1</option>
+                                <option>Môn 2</option>
+                                <option>Môn 3</option>
+                                <option>Môn 4</option>
+                                <option>Môn 5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                        <div class="form-group">
+                            <label for="exampleSelect1">Chọn đề</label>
+                            <select class="form-control" id="exampleSelect1">
+                                <option>Đề 1</option>
+                                <option>Đề 2</option>
+                                <option>Đề 3</option>
+                                <option>Đề 4</option>
+                                <option>Đề 5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container">
+                        <div class="card shadow" style="margin-bottom: 30px;">
+                            <div class="card-body">
+                                <form action="" method="POST" role="form">
+                                    <div id="question1" class="question" style="margin: 10px 0;">
+                                        <h3>Quesion 1</h3>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk of the card's content.</p>
+                                        <div class="answer">
+                                            <!-- Group of default radios - option 1 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerA" name="question1">
+                                                <label>Option 1</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 2 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerB" name="question1" checked>
+                                                <label>Option 2</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 3 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerC" name="question1">
+                                                <label>Option 3</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 4 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerD" name="question1">
+                                                <label>Option 4</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="question2" class="question" style="margin: 10px 0;">
+                                        <h3>Quesion 2</h3>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk of the card's content.</p>
+                                        <div class="answer">
+                                            <!-- Group of default radios - option 1 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerA" name="question2">
+                                                <label>Option 1</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 2 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerB" name="question2" checked>
+                                                <label>Option 2</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 3 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerC" name="question2">
+                                                <label>Option 3</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 4 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerD" name="question2">
+                                                <label>Option 4</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="question3" class="question" style="margin: 10px 0;">
+                                        <h3>Quesion 3</h3>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk of the card's content.</p>
+                                        <div class="answer">
+                                            <!-- Group of default radios - option 1 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerA" name="question3">
+                                                <label>Option 1</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 2 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerB" name="question3" checked>
+                                                <label>Option 2</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 3 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerC" name="question3">
+                                                <label>Option 3</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 4 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerD" name="question3">
+                                                <label>Option 4</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="question4" class="question" style="margin: 10px 0;">
+                                        <h3>Quesion 4</h3>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk of the card's content.</p>
+                                        <div class="answer">
+                                            <!-- Group of default radios - option 1 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerA" name="question4">
+                                                <label>Option 1</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 2 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerB" name="question4" checked>
+                                                <label>Option 2</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 3 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerC" name="question4">
+                                                <label>Option 3</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 4 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerD" name="question4">
+                                                <label>Option 4</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="question5" class="question" style="margin: 10px 0;">
+                                        <h3>Quesion 5</h3>
+                                        <p class="card-text">Some quick example text to build on the card title and make
+                                            up
+                                            the
+                                            bulk of the card's content.</p>
+                                        <div class="answer">
+                                            <!-- Group of default radios - option 1 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerA" name="question5">
+                                                <label>Option 1</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 2 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerB" name="question5" checked>
+                                                <label>Option 2</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 3 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerC" name="question5">
+                                                <label>Option 3</label>
+                                            </div>
+
+                                            <!-- Group of default radios - option 4 -->
+                                            <div class="custom-radio">
+                                                <input type="radio" id="answerD" name="question5">
+                                                <label>Option 4</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" style="display: flex;margin: 0 auto;" class="btn btn-primary text-center">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="../homepage/users/login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.menu-toggle').click(function () {
+                $('.menu-toggle').toggleClass('active');
+                $('nav').toggleClass('active');
+            })
+        });
+    </script>
+    
+
+</body>
+
+</html>

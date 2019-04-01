@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Admin - Thi trắc nghiệm</title>
+
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <link href="../../../public/custom/adminpage/css/adminpage.css" rel="stylesheet">
+    <link href="../../../public/custom/adminpage/css/style.css" rel="stylesheet">
+
+    <link href="../../../public/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto" style="color: #000 !important">
+                        <li class="nav-item" id="home">
+                            <a href="../../homepage/homepage.html" class="nav-link" style="padding: 16px 15px">Trang
+                                chủ</a>
+                        </li>
+                        <li class="nav-item" id="home">
+                            <a href="../users/adminpage.html" class="nav-link" style="padding: 16px 15px">Users</a>
+                        </li>
+                        <li class="nav-item" id="home">
+                            <a href="./question.html" class="nav-link actived" style="padding: 16px 15px">Câu hỏi</a>
+                        </li>
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Admin</span>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Adminpage</h1>
+
+                    <!-- Page Body -->
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                            <div class="card shadow mb-4">
+                                <div class="card-body">
+                                    <label>Thêm đề |</label>
+                                    <label>Sửa đề |</label>
+                                    <label>Xoá đề</label>
+                                    <div class="addExam">
+                                        <input id="toggle-one" checked type="checkbox">
+                                        <input id="toggle-two" checked type="checkbox">
+                                        <input id="toggle-three" checked type="checkbox">
+                                        <div class="input-group" style="margin-top: 10px; float: left;">
+                                            <input type="text" class="form-control" id="monThi"
+                                                placeholder="Tên môn thi">
+                                            <input type="text" class="form-control" id="monThi"
+                                                placeholder="Mã môn thi">
+                                            &nbsp;
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default">Thêm!</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                            <div class="card shadow mb-4">
+                                <div class="card-body">
+                                    <label>Thêm câu hỏi |</label>
+                                    <label>Sửa câu hỏi |</label>
+                                    <label>Xoá câu hỏi </label>
+                                    <div class="addQuestion">
+                                        <input id="toggle-four" checked type="checkbox">
+                                        <input id="toggle-five" checked type="checkbox">
+                                        <input id="toggle-six" checked type="checkbox">
+                                        <div class="input-group" style="margin-top: 10px;">
+                                            <input type="text" class="form-control" id="monThi"
+                                                placeholder="Tên môn thi">
+                                            <input type="text" class="form-control" id="monThi"
+                                                placeholder="Mã môn thi">
+                                            &nbsp;
+                                            <span class="input-group-btn">
+                                                <button type="button" class="btn btn-default">Thêm!</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="input-group" style="margin-top: 10px;">
+                                        <input type="text" class="form-control" id="monThi" placeholder="Câu hỏi">
+                                        <input type="text" class="form-control" id="monThi" placeholder="Đáp án A">
+                                        <input type="text" class="form-control" id="monThi" placeholder="Đáp án B">
+                                        <input type="text" class="form-control" id="monThi" placeholder="Đáp án C">
+                                        <input type="text" class="form-control" id="monThi" placeholder="Đáp án D">
+                                        &nbsp;
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-default">Thêm!</button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Đề thi và câu hỏi</h6>
+                        </div>
+                        <div class="row" style="margin: 10px">
+                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                <div class="form-group">
+                                    <label for="idSubject">Chọn môn</label>
+                                    <select class="form-control" id="idSubject">
+                                        <option>Môn 1</option>
+                                        <option>Môn 2</option>
+                                        <option>Môn 3</option>
+                                        <option>Môn 4</option>
+                                        <option>Môn 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                <div class="form-group">
+                                    <label for="idExam">Chọn đề</label>
+                                    <select class="form-control" id="idExam">
+                                        <option>Đề 1</option>
+                                        <option>Đề 2</option>
+                                        <option>Đề 3</option>
+                                        <option>Đề 4</option>
+                                        <option>Đề 5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <span class="input-group-btn" style="margin-top: 4vh;">
+                                <button type="button" class="btn btn-default">Xem</button>
+                            </span>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered text-center" id="dataTable" width="100%"
+                                    cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Mã đề</th>
+                                            <th>Môn</th>
+                                            <th>Cẩu hỏi</th>
+                                            <th>Đáp án A</th>
+                                            <th>Đáp án B</th>
+                                            <th>Đáp án C</th>
+                                            <th>Đáp án D</th>
+                                            <th>Thao tác</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Lịch sử</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary">Sửa</button>
+                                                <button type="button" class="btn btn-outline-success">Xoá</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Lịch sử</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary">Sửa</button>
+                                                <button type="button" class="btn btn-outline-success">Xoá</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Lịch sử</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary">Sửa</button>
+                                                <button type="button" class="btn btn-outline-success">Xoá</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Lịch sử</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary">Sửa</button>
+                                                <button type="button" class="btn btn-outline-success">Xoá</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Lịch sử</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary">Sửa</button>
+                                                <button type="button" class="btn btn-outline-success">Xoá</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Lịch sử</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary">Sửa</button>
+                                                <button type="button" class="btn btn-outline-success">Xoá</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Lịch sử</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary">Sửa</button>
+                                                <button type="button" class="btn btn-outline-success">Xoá</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Lịch sử</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary">Sửa</button>
+                                                <button type="button" class="btn btn-outline-success">Xoá</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Lịch sử</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>content 1</td>
+                                            <td>
+                                                <button type="button" class="btn btn-outline-primary">Sửa</button>
+                                                <button type="button" class="btn btn-outline-success">Xoá</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2019</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="../homepage/users/login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../../../public/js/jquery.min.js"></script>
+    <script src="../../../public/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../../../public/js/admin.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="../../../public/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="../../../public/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+    <script>
+        // Call the dataTables jQuery plugin
+        $(document).ready(function () {
+            $('#dataTable').DataTable();
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#toggle-one').bootstrapToggle();
+            $('#toggle-two').bootstrapToggle();
+            $('#toggle-three').bootstrapToggle();
+            $('#toggle-four').bootstrapToggle();
+            $('#toggle-five').bootstrapToggle();
+            $('#toggle-six').bootstrapToggle();
+        })
+    </script>
+</body>
+
+</html>

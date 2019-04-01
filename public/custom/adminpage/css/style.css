@@ -1,0 +1,27 @@
+.nav-link {
+    color: #000 !important;
+    margin: 0 5px;
+}
+
+.nav-link:hover {
+    border-radius: 5px;
+    font-size: 2rem;
+}
+
+.actived {
+    background: #069370;
+    border-radius: 5px;
+    color: #fff !important;
+    font-size: 2rem;
+}
+
+.toggle-group {
+    border: 1px solid #36509c;
+    border-radius: 3px;
+}
+.toggle-group span {
+    background: #36509c !important;   
+}
+.form-group input {
+    display: inline;
+}

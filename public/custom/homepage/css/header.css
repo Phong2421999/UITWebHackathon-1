@@ -1,0 +1,110 @@
+html body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+header {
+    z-index: 999;
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    /*box-shadow: 0 2px 5px rgba(0,0,0,.2);*/
+}
+.logo {
+    color: #069370;
+    height: 60px;
+    font-size: 36px;
+    line-height: 60px;
+    padding: 0 20px;
+    text-align: center;
+    box-sizing: border-box;
+    float: left;
+    font-weight: 700;
+    text-decoration: none !important;
+}
+nav {
+    float: right;
+    margin: auto 20px;
+}
+.clearfix {
+    clear: both;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a {
+    text-transform: uppercase;
+    display: block;
+    margin: 10px 3px;
+    padding: 10px 20px;
+    text-decoration: none !important;
+    /*color: #262626;*/
+    color: #fff;
+    border-radius: 5px;
+}
+nav ul li:nth-child(5) a {
+    border: 2px solid #069370;
+    color: #fff;
+}
+nav ul li a.active,
+nav ul li a:hover {
+    background: #069370;
+    color:#262626;
+    transition: 0.5s;
+}
+@media only screen and (max-width: 768px) {
+       /*Nav-bar*/
+       .menu-toggle {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        float: right;
+        cursor: pointer;
+        text-align: center;
+        font-size: 30px;
+        color: #069370;
+        transition: 2s;
+    }
+    .menu-toggle:before {
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+    .menu-toggle.active:before {
+        content: '\f00d';
+    }
+    nav {
+        display: none;
+        width: 0%;
+        transition: 1s;
+        opacity: 0;
+    }
+    nav ul li a {
+        border-radius: none !important;
+    }
+    nav.active {
+        display: block;
+        width: 80%;
+        background: #000;
+        text-align: center;
+        opacity: 1;
+    }
+    nav.active ul {
+        display: block;
+    }
+    nav.active ul li a {
+        margin: 0;
+        border: none;
+    }
+}
+
