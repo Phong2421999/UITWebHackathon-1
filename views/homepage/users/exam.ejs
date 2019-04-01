@@ -1,24 +1,10 @@
 <!DOCTYPE html>
-<html lang="vi">
-<%-include('../../../layouts/head.ejs')%>
+<html lang="en">
+<%-include('../../../layouts/homepage/users/exam/head.ejs')%>
 <body>
     <div class="wrapper">
         <!--Start Header-->
-        <header class="animated fadeInDown">
-            <a class="logo" href="">Logo</a>
-            <div class="menu-toggle">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="../homepage.html">Trang Chủ</a></li>
-                    <li><a class="active" href="#">Khoá Thi</a></li>
-                    <li><a href="#">Thông tin</a></li>
-                    <li><a href="#" data-toggle="modal" data-target="#logoutModal">Đăng xuất</a></li>
-                </ul>
-            </nav>
-            <div class="clearfix">
-            </div>
-        </header>
+        <%-include('../../../layouts/homepage/users/exam/header.ejs')%>
         <!--End Header-->
         <section>
             <div class="container">
@@ -250,6 +236,8 @@
             })
         });
     </script>
-    
+
 
 </body>
+
+</html>
