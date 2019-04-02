@@ -18,28 +18,34 @@
 
 </head>
 <body>
+
   <div class="base">
     <!--Start Header-->
     <%include ../models/_navbar%>
     <!--End Header-->
     <!--Start Login Form-->
+
     <section class="bg-test" style="padding-top: 30vh;">
         <div class="wrapper fadeInDown">
+
             <div id="formContent">
               <!-- Tabs Titles -->
 
               <!-- Icon -->
               <div class="fadeIn first">
-              </div>
 
+              </div>
               <!-- Login Form -->
-              <form>
-                <input type="text" id="fullname" class="fadeIn third" name="fullname" placeholder="fullname">
-                <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
-                <input type="password" id="password" class="fadeIn fourth" name="login" placeholder="password">
+              <%-include('./models/_error.ejs')%>
+              <form action="/users/register" method = "POST" role="form">
+                <input type="text" id="fullname" class="fadeIn third" name="registerFullname" placeholder="fullname"
+                value="<%if(typeof inputData ==='object'){%><%=inputData.fullname%><%}%>">
+                <input type="text" id="username" class="fadeIn second" name="registerUsername" placeholder="username"
+                value="<%if(typeof inputData ==='object'){%><%=inputData.username%><%}%>">
+                <input type="password" id="password" class="fadeIn fourth" name="registerPassword" placeholder="password"
+                value="<%if(typeof inputData ==='object'){%><%=inputData.password%><%}%>">
                 <input type="submit" class="fadeIn fourth" value="Register">
               </form>
-
               <!-- Remind Passowrd -->
               <div id="formFooter">
                 <p>© 2019 Copyright PhiDuy </p>
@@ -47,6 +53,7 @@
             </div>
           </div>
     </section>
+
     <!--End Login Form-->
     </div>
 </body>
