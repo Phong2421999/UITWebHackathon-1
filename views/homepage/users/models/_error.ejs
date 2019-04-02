@@ -1,0 +1,7 @@
+<%if(typeof error ==="object" && error.length>0){%>
+<div class="alert alert-warning">
+<%for(item of error){%>
+  <%=item%><br>
+<%}%>
+</div>
+<%}%>
